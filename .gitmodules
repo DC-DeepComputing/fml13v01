@@ -1,0 +1,20 @@
+[submodule "buildroot"]
+	path = buildroot
+	url = git@192.168.110.45:sdk/buildroot.git
+	branch = jh7110-master
+[submodule "u-boot"]
+	path = u-boot
+	url = git@192.168.110.45:sdk/u-boot.git
+	branch = jh7110-master
+[submodule "linux"]
+	path = linux
+	url = git@192.168.110.45:sbc/linux.git
+	branch = vf2-6.1.y-devel
+[submodule "opensbi"]
+	path = opensbi
+	url = git@192.168.110.45:sdk/opensbi.git
+	branch = master
+[submodule "soft_3rdpart"]
+	path = soft_3rdpart
+	url = git@192.168.110.45:sdk/soft_3rdpart.git
+	branch = jh7110-devel

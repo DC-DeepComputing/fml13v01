@@ -1,0 +1,25 @@
+# This is the sample jh7110_uEnv.txt file for starfive visionfive U-boot
+# The current convention (SUBJECT TO CHANGE) is that this file
+# will be loaded from the third partition on the
+# MMC card.
+
+# The FIT file to boot from
+fitfile=starfiveu.fit
+
+# for debugging boot
+bootargs_ext=setenv bootargs "console=tty1 console=ttyS0,115200 debug rootwait earlycon=sbi root=/dev/${sdev_blk}";
+
+# for addr info
+# boot Linux flat or compressed 'Image' stored at 'kernel_addr_r'
+irdsize=5f00000
+
+# Use the FDT in the FIT image..
+setupfdt1=fdt addr ${fdtaddr}; fdt resize;
+
+setupird=setexpr irdend ${ramdisk_addr_r} + ${irdsize}; fdt set /chosen linux,initrd-start <0x0 ${ramdisk_addr_r}>; fdt set /chosen linux,initrd-end <0x0 0x${irdend}>
+
+setupfdt2=fdt set /chosen bootargs "${bootargs}";
+
+bootwait=setenv _delay ${bootdelay}; echo ${_delay}; while test ${_delay} > 0; do sleep 1; setexpr _delay ${_delay} - 1; echo ${_delay}; done
+
+boot2=run bootargs_ext; fatload ${bootdev} ${devnum}:${bootpart} ${loadaddr} ${fitfile}; bootm start ${loadaddr}; run setupfdt1;run setupird;run setupfdt2; bootm loados ${loadaddr}; run chipa_set_linux; run cpu_vol_set; echo "Booting kernel in"; booti ${kernel_addr_r} ${ramdisk_addr_r}:${filesize} ${fdtaddr}
