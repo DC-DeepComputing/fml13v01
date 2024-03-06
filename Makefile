@@ -238,7 +238,7 @@ $(perf_tool_wrkdir)/perf: $(linux_srcdir) $(vmlinux)
 		ARCH=riscv \
 		CROSS_COMPILE=$(CROSS_COMPILE) \
 		WERROR=0 NO_GTK2=1 NO_LIBPERL=1 \
-		NO_LIBBIONIC=1
+		NO_LIBBIONIC=1 NO_LIBELF=1 NO_LIBTRACEEVENT=1
 
 .PHONY: perf
 perf: $(perf_tool_wrkdir)/perf
