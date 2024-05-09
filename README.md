@@ -26,29 +26,23 @@ $ sudo apt-get install git-lfs
 
 ## Fetch Code Instructions ##
 
-Checkout this repository  (e.g.: branch `vf2-6.6.y-devel`). Then checkout all of the linked submodules using:
+Checkout this repository  (e.g.: branch `JH7110_VisionFive2_6.6.y_devel`). Then checkout all of the linked submodules using:
 
-	$ git clone git@192.168.110.45:sbc/visionfive.git
-	$ cd visionfive
-	$ git checkout --track origin/vf2-6.6.y-devel
+	$ git clone https://github.com/starfive-tech/VisionFive2.git
+	$ cd VisionFive2
+	$ git checkout --track origin/JH7110_VisionFive2_6.6.y_devel
 	$ git submodule update --init --recursive
-
-In case someone run `git clone git@gitlab.starfivetech.com:sbc/visionfive.git`, recommend to add the below at the tail of the /etc/hosts to fix the network domain issue:
-
-```
-192.168.110.45 gitlab.starfivetech.com
-```
 
 This will take some time and require around 9GB of disk space. Some modules may fail because certain dependencies don't have the best git hosting. The only solution is to wait and try again later (or ask someone for a copy of that source repository).
 
 For user who build the release tag version, the above command is enough. For developer, need to switch the 5 submodules `buildroot`, `u-boot`, `linux`, `opensbi`, `soft_3rdpart` to correct branch manually, or refer to `.gitmodule`
 
 ```
-$ cd buildroot && git checkout --track origin/jh7110-master && cd ..
-$ cd u-boot && git checkout --track origin/jh7110-master && cd ..
-$ cd linux && git checkout --track origin/vf2-6.6.y-devel && cd ..
+$ cd buildroot && git checkout --track origin/JH7110_VisionFive2_devel && cd ..
+$ cd u-boot && git checkout --track origin/JH7110_VisionFive2_devel && cd ..
+$ cd linux && git checkout --track origin/JH7110_VisionFive2_6.6.y_devel && cd ..
 $ cd opensbi && git checkout master && cd ..
-$ cd soft_3rdpart && git checkout jh7110-devel && cd ..
+$ cd soft_3rdpart && git checkout JH7110_VisionFive2_devel && cd ..
 ```
 
 ## Quick Build Instructions
@@ -192,7 +186,7 @@ StarFive #
 
 Then press any key to stop and enter uboot terminal, there are two way to boot the board
 
-#### 1. Running image.fit with the default dtb `jh7110-visionfive-v2.dtb`
+#### 1. Running image.fit with the default dtb `jh7110-starfive-visionfive-2-v1.3b.dtb`
 
 transfer image.fit through TFTP:
 
@@ -223,7 +217,7 @@ Password: starfive
 
 #### 2. Running the other dtb with the Image.gz and initramfs.cpio.gz
 
-If we want to load the other dtb, e.g. `jh7110-visionfive-v2-wm8960.dtb`, follow the below
+If we want to load the other dtb, e.g. `jh7110-starfive-visionfive-2-wm8960.dtb`, follow the below
 
 Step1: set environment parameters:
 
@@ -234,7 +228,7 @@ setenv ipaddr 192.168.xxx.xxx; setenv serverip 192.168.xxx.xxx;
 Step2: upload files to ddr:
 
 ```
-tftpboot ${fdt_addr_r} jh7110-visionfive-v2-wm8960.dtb;
+tftpboot ${fdt_addr_r} jh7110-starfive-visionfive-2-wm8960.dtb;
 tftpboot ${kernel_addr_r} Image.gz;
 tftpboot ${ramdisk_addr_r} initramfs.cpio.gz;
 run chipa_set_linux;run cpu_vol_set;
