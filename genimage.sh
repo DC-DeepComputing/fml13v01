@@ -29,7 +29,7 @@ if [ $HWBOARD == "visionfive2" ]; then
 else
 	GENIMAGE_CFG=$TOPDIR/conf/genimage.cfg
 fi
-GENIMAGE=$TOPDIR/work/buildroot_initramfs/host/bin/genimage
+GENIMAGE=$TOPDIR/work/buildroot_rootfs/host/bin/genimage
 
 if [ ! -f $GENIMAGE ]; then
     printf $COLOR_RED
