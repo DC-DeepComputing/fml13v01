@@ -32,6 +32,7 @@ Checkout this repository  (e.g.: branch `JH7110_VisionFive2_6.6.y_devel`). Then 
 	$ cd VisionFive2
 	$ git checkout --track origin/JH7110_VisionFive2_6.6.y_devel
 	$ git submodule update --init --recursive
+	$ cd linux && git branch JH7110_VisionFive2_6.6.y_devel origin/JH7110_VisionFive2_6.6.y_devel && cd ..
 
 This will take some time and require around 9GB of disk space. Some modules may fail because certain dependencies don't have the best git hosting. The only solution is to wait and try again later (or ask someone for a copy of that source repository).
 
