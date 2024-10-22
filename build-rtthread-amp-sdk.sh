@@ -59,9 +59,7 @@ if [ ! -f /usr/bin/scons ]; then
 fi
 
 if [ ! -d rtthread ]; then
-    git clone -b amp-5.0.2-devel git@192.168.110.45:sdk/rtthread.git rtthread
-    # or
-    # git submodule add -b amp-5.0.2-devel git@192.168.110.45:sdk/rtthread.git rtthread
+    git clone -b amp-5.0.2-devel https://github.com/starfive-tech/rt-thread.git rtthread
 fi
 
 # build sdcard image

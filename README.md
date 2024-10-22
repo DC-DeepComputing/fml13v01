@@ -365,7 +365,7 @@ The sdk also support building RT-Thread AMP Image which will run both rt-thread 
 First need to download RT-Thread code:
 
 ```
-$ git clone -b amp-5.0.2-devel git@192.168.110.45:sdk/rtthread.git rtthread
+$ git clone -b amp-5.0.2-devel https://github.com/starfive-tech/rt-thread.git rtthread
 ```
 
 Then download and prepare the toolchain needed for RT-Thread code:
