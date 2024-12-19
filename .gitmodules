@@ -1,20 +1,20 @@
 [submodule "buildroot"]
 	path = buildroot
-	url = https://github.com/starfive-tech/buildroot.git
+	url = https://github.com/DC-DeepComputing/fml13v01-buildroot.git
 	branch = JH7110_VisionFive2_devel
 [submodule "u-boot"]
 	path = u-boot
-	url = https://github.com/starfive-tech/u-boot.git
+	url = https://github.com/DC-DeepComputing/fml13v01-uboot.git
 	branch = JH7110_VisionFive2_devel
 [submodule "linux"]
 	path = linux
-	url = https://github.com/starfive-tech/linux.git
+	url = https://github.com/DC-DeepComputing/fml13v01-linux.git
 	branch = JH7110_VisionFive2_6.6.y_devel
 [submodule "opensbi"]
 	path = opensbi
-	url = https://github.com/starfive-tech/opensbi.git
+	url = https://github.com/DC-DeepComputing/fml13v01-opensbi.git
 	branch = JH7110_VisionFive2_devel
 [submodule "soft_3rdpart"]
 	path = soft_3rdpart
-	url = https://github.com/starfive-tech/soft_3rdpart.git
+	url = https://github.com/DC-DeepComputing/fml13v01-soft_3rdpart.git
 	branch = JH7110_VisionFive2_devel
