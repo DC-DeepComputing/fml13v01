@@ -1,11 +1,11 @@
 [submodule "buildroot"]
 	path = buildroot
 	url = https://github.com/DC-DeepComputing/fml13v01-buildroot.git
-	branch = JH7110_VisionFive2_devel
+	branch = fm7110-6.6
 [submodule "u-boot"]
 	path = u-boot
 	url = https://github.com/DC-DeepComputing/fml13v01-uboot.git
-	branch = JH7110_VisionFive2_devel
+	branch = fm7110-6.6
 [submodule "linux"]
 	path = linux
 	url = https://github.com/DC-DeepComputing/fml13v01-linux.git
@@ -13,8 +13,8 @@
 [submodule "opensbi"]
 	path = opensbi
 	url = https://github.com/DC-DeepComputing/fml13v01-opensbi.git
-	branch = JH7110_VisionFive2_devel
+	branch = fm7110-6.6
 [submodule "soft_3rdpart"]
 	path = soft_3rdpart
 	url = https://github.com/DC-DeepComputing/fml13v01-soft_3rdpart.git
-	branch = JH7110_VisionFive2_devel
+	branch = fm7110-6.6
