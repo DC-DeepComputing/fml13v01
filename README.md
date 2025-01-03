@@ -36,7 +36,11 @@ This will take some time and require around 12GB of disk space. Some modules may
 
 For developer, need to switch the 5 submodules `buildroot`, `u-boot`, `linux`, `opensbi`, `soft_3rdpart` to correct branch manually, or refer to `.gitmodule`
 
-	$ git submodule foreach --recursive "git checkout origin/fm7110-6.6 -B fm7110-6.6"
+	$ cd buildroot && git checkout -B fm7110-6.6 origin/fm7110-6.6 && cd ..
+	$ cd u-boot && git checkout -B fm7110-6.6 origin/fm7110-6.6 && cd ..
+	$ cd linux && git checkout -B fm7110-6.6 origin/fm7110-6.6 && cd ..
+	$ cd opensbi && git checkout -B fm7110-6.6 origin/fm7110-6.6 && cd ..
+	$ cd soft_3rdpart && git checkout -B fm7110-6.6 JH7110_VF2_6.6_v5.12.0 && cd ..
 
 ## Quick Build Instructions
 

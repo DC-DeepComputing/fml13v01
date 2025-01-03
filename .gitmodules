@@ -9,12 +9,12 @@
 [submodule "linux"]
 	path = linux
 	url = https://github.com/DC-DeepComputing/fml13v01-linux.git
-	branch = JH7110_VisionFive2_6.6.y_devel
+	branch = fm7110-6.6
 [submodule "opensbi"]
 	path = opensbi
 	url = https://github.com/DC-DeepComputing/fml13v01-opensbi.git
 	branch = fm7110-6.6
 [submodule "soft_3rdpart"]
 	path = soft_3rdpart
-	url = https://github.com/DC-DeepComputing/fml13v01-soft_3rdpart.git
-	branch = fm7110-6.6
+	url = https://github.com/starfive-tech/soft_3rdpart.git
+	branch = JH7110_VisionFive2_devel
