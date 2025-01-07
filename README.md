@@ -59,7 +59,7 @@ work/
 ├── linux/arch/riscv/boot
     ├── dts
     │   └── starfive
-    │       └──jh7110-starfive-visionfive-2-framework.dtb
+    │       └──jh7110-starfive-visionfive-2-fml13v01.dtb
     └── Image.gz
 ```
 
