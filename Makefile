@@ -35,7 +35,7 @@ linux_wrkdir := $(wrkdir)/linux
 ifeq ($(HWBOARD), evb)
 	linux_defconfig := $(linux_srcdir)/arch/riscv/configs/starfive_jh7110_defconfig
 else
-	linux_defconfig := $(linux_srcdir)/arch/riscv/configs/starfive_visionfive2_defconfig
+	linux_defconfig := $(linux_srcdir)/arch/riscv/configs/fml13v01_defconfig
 endif
 
 vmlinux := $(linux_wrkdir)/vmlinux
